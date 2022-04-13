@@ -1,11 +1,9 @@
 img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+    transition: all 0.25s linear;
 }
-td:hover img{
-  width: 200px;
-  height: 200px;
-}
+
 
 td {
     text-align: center;
@@ -14,8 +12,14 @@ td {
     border-bottom: 5px solid black;
     border-left: 5px solid black;
     border-right: 5px solid black;
-    
+    height: 170px;  
 }
+
+td:hover img{
+    height: 130px;
+    width: 130px;
+}
+
 
 html {
     
@@ -32,7 +36,7 @@ table {
     left: 50%;
     transform: translateX(-50%);
     width: 60%;
-    height: 50% ;
+    height: 70% ;
     border-top: 5px solid rgba(0, 0, 0, 0);
     border-bottom: 5px solid rgba(0, 0, 0, 0);
     border-left: 5px solid rgba(0, 0, 0, 0);
@@ -142,4 +146,35 @@ li {
       
     }
   }
-  
+    .sidebar{
+      width: 346px;
+      height: 520px;
+      background-color: white;
+      position: absolute;
+      top: 67px;
+      display: none;
+      z-index: 1;
+      border-radius: 20px;
+      opacity: 0;
+      animation: fadeIn 0.3s linear forwards;
+
+    }  
+
+    @keyframes fadeIn{
+      to {
+        opacity: 1;
+
+      }
+    }
+
+    #menu:checked + .sidebar{
+      display: block;
+    }
+    .sil{
+      float: left; 
+      padding: 20px; 
+      cursor: pointer;
+    }
+    .sil:hover {
+      background: #ddd;
+    }
